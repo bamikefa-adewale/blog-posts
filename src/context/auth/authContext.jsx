@@ -66,6 +66,7 @@ export const AuthContextProvider = ({ children }) => {
     } catch (error) {
       const data = error.response.data;
       setError(data.message);
+      setLoading(false);
     }
     setUsername("");
     setPassword("");
